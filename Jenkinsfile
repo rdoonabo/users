@@ -42,7 +42,7 @@ pipeline {
   }
 
   environment {
-    APPLICATION_NAME = "i27-user"
+    APPLICATION_NAME = "user"
     POM_VERSION = readMavenPom().getVersion()
     POM_PACKAGING = readMavenPom().getPackaging()
     DOCKER_HUB = "docker.io/dravikumar442277"
@@ -146,7 +146,7 @@ pipeline {
       steps {
         script {
              imageValidation().call()
-             dockerDeploy ('dev','5761','8761').call()
+             dockerDeploy ('dev','5232','8232').call()
         }
       }
     }
@@ -161,7 +161,7 @@ pipeline {
       steps {
        script {
         imageValidation().call()
-        dockerDeploy ('test','6761','8761').call()
+        dockerDeploy ('test','6232','8232').call()
        }
       }
     }
@@ -176,7 +176,7 @@ pipeline {
       steps {
        script {
         imageValidation().call()
-        dockerDeploy ('prod','7761','8761').call()
+        dockerDeploy ('prod','7232','8232').call()
        }
       }
     }
@@ -250,3 +250,11 @@ def dockerBuildandPush() {
         echo "***** push done successfully ****************************"
     }
 }
+
+
+//User  container port is 8232
+// dev 5232
+// test 6232
+// prod 7232
+
+
