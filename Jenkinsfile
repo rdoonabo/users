@@ -46,7 +46,7 @@ pipeline {
     DOCKER_REPO = "user"
     DOCKER_CREDS = credentials('dravikumar442277_docker_creds')
     SONAR_URL = "http://35.238.68.138:9000/"
-    SONAR_TOKENS = credentials('sonar_token')
+    SONAR_TOKENS = credentials('sonar_token_2')
   }
 
   stages {
