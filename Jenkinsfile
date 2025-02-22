@@ -1,6 +1,3 @@
-// adding users data to jenkinsfile
-
-
 pipeline {
   agent {
     label 'k8s-slave'
