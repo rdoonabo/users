@@ -13,7 +13,7 @@ spring:
     #    url: jdbc:mysql://34.29.125.76:3306,34.68.236.8:3306/learnerCrownClothing?useSSL=FALSE
     password: root
     url: jdbc:mysql://localhost:3306/product_managment?useSSL=FALSE
-    username: root
+    username: db-user
   jpa:
     hibernate:
       ddl-auto: update
